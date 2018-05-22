@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native'
-
+import { View, Text, Button, TouchableOpacity } from 'react-native'
+import styles from './styles'
 const users = [
   {name: 'Kobe Bryant'},
   {name: 'Michael Jordan'},
@@ -11,7 +11,17 @@ class Home extends Component {
 
   static navigationOptions = {
     title: 'Home',
-    headerBackTitle: 'Home'
+    headerBackTitle: 'Home',
+    headerStyle: {
+      height: 85,
+    },
+    headerRight: (
+      <TouchableOpacity style={styles.headerRightButton}>
+         <Text>
+            ✌︎
+         </Text>
+      </TouchableOpacity>
+    )
   }
 
   render () {
