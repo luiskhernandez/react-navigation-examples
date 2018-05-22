@@ -7,9 +7,6 @@ import { StackNavigator } from 'react-navigation'
 export const Navigator = new StackNavigator({
   Home: {
     screen: Home,
-    navigationOptions: {
-      headerBackTitle: 'Home',
-    },
   },
   Demo: { screen: Demo },
 },{
