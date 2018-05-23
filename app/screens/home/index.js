@@ -7,6 +7,28 @@ const users = [
   {name: 'Allen Iverson'},
 ]
 
+const HeaderTitle = ({onPress}) => {
+  return (
+      <TouchableOpacity
+        onPress={onPress}
+        style={styles.headerRightButton}>
+         <Text>
+           location
+         </Text>
+      </TouchableOpacity>
+  )
+}
+const HeaderButton = ({onPress}) => {
+  return (
+      <TouchableOpacity
+        onPress={onPress}
+        style={styles.headerRightButton}>
+         <Text>
+            ✌︎
+         </Text>
+      </TouchableOpacity>
+  )
+}
 class Home extends Component {
 
   static navigationOptions = {
@@ -15,13 +37,9 @@ class Home extends Component {
     headerStyle: {
       height: 85,
     },
-    headerRight: (
-      <TouchableOpacity style={styles.headerRightButton}>
-         <Text>
-            ✌︎
-         </Text>
-      </TouchableOpacity>
-    )
+    headerTitle: <HeaderButton onPress={() => alert('center')} />,
+    headerRight: <HeaderButton onPress={() => alert('right')} />,
+    headerLeft: <HeaderButton onPress={() => alert('left')} />
   }
 
   render () {

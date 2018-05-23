@@ -18,16 +18,15 @@ export const Navigator = new StackNavigator({
 })
 
 export const Tabs = TabNavigator({
-  TabA: { screen: TabA },
+  TabA: { screen: Navigator },
   TabB: { screen: TabB },
-  TabC: { screen: Navigator },
+  TabC: { screen: TabC },
 },{
   order: ['TabA', 'TabB', 'TabC']
 })
 
 export const Drawer = DrawerNavigator({
   Tabs:  { screen: Tabs },
-  Stack: { screen: Navigator },
   Plain: { screen: Plain },
 })
 
