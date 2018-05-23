@@ -50,7 +50,7 @@ class Home extends Component {
            <Button
               key={index}
               title={`Chat with ${user.name}`}
-              onPress={ () => navigate('Demo', { name: user.name }) }
+              onPress={ () => navigate('Demo', { name: user.name, index: index }) }
            />
          ))}
        </View>

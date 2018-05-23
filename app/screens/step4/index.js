@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { View, Text, Button } from 'react-native'
 
-class Demo extends Component {
+class Step4 extends Component {
 
   render () {
     const { navigation: { navigate, state: { params } } } = this.props
     return (
        <View>
            <Button
-              title={`go step 1`}
-              onPress={ () => navigate('Step1') }
+              title={`reset`}
+              onPress={ () => navigate('Home') }
            />
-         <Text>Demo</Text>
+         <Text>Step 4</Text>
        </View>
     )
   }
 }
 
-export default Demo
+export default Step4
